@@ -21,10 +21,12 @@ PyCorder is intended to be a back end to log and record data in stages.
 
 
 ## Confirmed working:
-
+- Getting system Epoch time to use as BD unique id
+- Getting CPU temperature to use as real data 
 - Creating and implementing a class
-- creating a database and tables with sqlite3 
-- logging temperature (CPU) 
+- Creating a CSV entry
+- creating a database and tables
+
 
 ## todo
 - Creat generic DB to hold sensor data
