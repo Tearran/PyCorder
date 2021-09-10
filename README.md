@@ -1,13 +1,12 @@
 # PyCorder
 ### Python Sensor Recorder 
 
-PyCorder is intended to be a back end to log and record data in stages. 
+PyCorder is intended to be a back end to log and record data in stages.
 
 ## Stages 
 
 1. record to flat-file (txt, JSON) - usage local usage (SBC display, LED indicators, smart apps)
 2. record to  DB (SQLite, CVS) - usage (averages, charts)  
-
 3. DB size/time trigger to migrate DB data to git-repo or DB server (MongoDB, MySQL, PostgreSQL) - usage public, historical,  
 
 
