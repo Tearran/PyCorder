@@ -5,9 +5,9 @@ PyCorder is intended to be a back end to log and record data in stages.
 
 ## Stages 
 
-1. record to flat-file (txt, JSON) - usage local usage (SBC display, LED indicators, smart apps)
-2. record to  DB (SQLite, CVS) - usage (averages, charts)  
-3. DB size/time trigger to migrate DB data to git-repo or DB server (MongoDB, MySQL, PostgreSQL) - usage public, historical,  
+1. Format to dicionanry (XML, JSON, CSV) - usage (SBC display, LED indicators, smart apps)
+2. Record formated data to Flatfile DB (SQLite, CVS, other) - usage (Time > 1 s/ms, passed averages, charts/plots)  
+3. Store DB size/time trigger to migrate Flatfile data to git-repo or DB server (MongoDB, MySQL, PostgreSQL) - usage public, historical, AI predictive)  
 
 
 ## Requierments:
@@ -15,8 +15,12 @@ PyCorder is intended to be a back end to log and record data in stages.
 ```sh 
 #!/usr/bin/python3 
 # -*- coding: utf-8 -*- 
-
-#include sqlite3
+import os
+import multiprocessing
+import time
+import psutil
+import spidev as SPI
+from lib import ST7789
 ```
 
 
@@ -29,7 +33,9 @@ PyCorder is intended to be a back end to log and record data in stages.
 
 
 ## todo
-- Creat generic DB to hold sensor data
+- add micro controler
+- Remove as many Libs as possible
+- Creat generic flatfile DB to hold sensor data
 - research `#import multiprocessing`
 - research `#import os`
 - research `#import psutil`
