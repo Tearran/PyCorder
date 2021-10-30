@@ -1,29 +1,26 @@
 # Raspberry pi Zero OS Modification
-The following documentation is based on a bash script ( located below )
 
 ## Intro:
-
+>The following documentation is based on a bash script ( located below ). 
 >The script is an attempt to increase performance and or stability while learning sharing results on the way. 
 
- Customizing OS experiment:
-Completed:
-- update && upgrade system
-- Install Python3 node.js pip3 etc
-- make and test hello world node.js 
-- rip SD card to img
-- burn img to 16+gig sd exspant and test.
+### Customizing OS experiment:
 
-TODO:
-1. Change boot logo
-2. Test kernel - (later modules experiments)
-3. Copy new kernel to 4 gig SD card (replicate above steps) 
-	a. rip SD card to img
-  b. burn img to 16+gig sd exspant and test.
+Currently:
+1. download and compile kernel 
+		- (12 hours and going as of writing)
+    
+TODO    
+- Test kernel - (later modules experiments)
+- Copy new kernel to 4 gig SD card (replicate above steps) 
+	- rip SD card to img
+  - burn img sd exspand and test.
 
 
 
 ## Setup
 ### Requierments
+- raspberry pi zero
 - The basic setup to ssh into your pi.
 - build tools
 - build Time
@@ -31,11 +28,11 @@ TODO:
 - text editing
 	- nano : is used in the following examples
   - vim
-  - bash echo >
+  - echo, cat
   - etc
 - ssh
-	- putty
-  - ?????
+	- [putty](https://www.putty.org/)
+  - [MobaXterm](https://mobaxterm.mobatek.net/) : is used in the following examples
 - Time
 
 ### Tools & source
@@ -47,14 +44,23 @@ The build tools
 ```bash 
 sudo apt install git bc bison flex libssl-dev make
 ```
-download git source code .....
+- git (Global Information Tracker) version control system
+- bc [(numeric processing language)](https://www.gnu.org/software/bc/) 
+- bison (general-purpose parser)
+- flex (lex reads the given input files)
+- libssl-dev (he portion of OpenSSL which supports TLS)
+- make [intro](https://web.mit.edu/gnu/doc/html/make_2.html)
+
+
+#### Source code .....
+get git source
 
 ```bash
 git clone --depth=1 https://github.com/raspberrypi/linux
 ```
 
 
-> the flag --depth=1 (as i understand it) will allow us to only download the latest code and not the history of the code in its entirety 
+>--depth=1 (as I understand), will allow us to download the latest code(top layer). Saving time buy not downloading the history of the code in its entirety 
 
 
 
@@ -62,7 +68,7 @@ git clone --depth=1 https://github.com/raspberrypi/linux
 ### Configure
 Configure the build
 
-Change into the downloaded directory
+Move into the downloaded directory
 ```bash 
 cd linux 
 ``` 
@@ -142,7 +148,7 @@ sudo apt update
 while true; do
  cat << "EOF"
 
-    LKARS Kernel Configuration
+      Kernel Configuration
              TR-560
  ________.--------------.________
 |  ||__| [_]|                    |
