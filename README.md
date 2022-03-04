@@ -41,7 +41,7 @@ from lib import ST7789
 
 # Contributors
 
-##Special thanks to the following people and their education projects:
+## Special thanks to the following people and their education projects:
 
 - ShotokuTech: [git](https://github.com/ShotokuTech)  [youtube](https://www.youtube.com/c/ShotokuTech)
 - adafruit: [web](https://learn.adafruit.com/)
