@@ -1,13 +1,11 @@
-# PyCorder
-### Python Sensor Recorder 
-
-PyCorder is intended to be a back end to log and record data in stages.
+# Sensors, Backend
+### Sensor
+To log and record data in stages.
 
 ## Stages 
-
-1. Format to dicionanry (XML, JSON, CSV) - usage (SBC display, LED indicators, smart apps)
-2. Record formated data to Flatfile DB (SQLite, CVS, other) - usage (Time > 1 s/ms, passed averages, charts/plots)  
-3. Store DB size/time trigger to migrate Flatfile data to git-repo or DB server (MongoDB, MySQL, PostgreSQL) - usage public, historical, AI predictive)  
+1. Formate data TBD: ($TEMP, Flatfile)
+2. Record formated data TBD: options(SQLite, CVS, other)
+3. Store and migrate data to remote server TBD: options(MongoDB, MySQL, PostgreSQL) - usage public, historical, AI predictive)  
 
 
 ## Requierments:
@@ -32,20 +30,18 @@ from lib import ST7789
 - creating a database and tables
 
 
-## todo
-- add micro controler
-- Remove as many Libs as possible
+## T0 B3 D373RM4ND
+
 - Creat generic flatfile DB to hold sensor data
 - research `#import multiprocessing`
 - research `#import os`
 - research `#import psutil`
 - [open weather map](https://openweathermap.org/api) integration
-- [MicroPython](http://micropython.org/) support
 - a lot
 
 # Contributors
 
-Special thanks to the following people and their education projects:
+##Special thanks to the following people and their education projects:
 
 - ShotokuTech: [git](https://github.com/ShotokuTech)  [youtube](https://www.youtube.com/c/ShotokuTech)
 - adafruit: [web](https://learn.adafruit.com/)
@@ -54,4 +50,4 @@ Special thanks to the following people and their education projects:
 
 
  
-[SocialArtCasts](http://socialartcasts.com)  
+ 
